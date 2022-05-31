@@ -2557,18 +2557,6 @@ Objects:Button('Unlock all islands', function() -- string <text>, function [call
         wait(0.1)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
 end)
-local Objects = tab2:Section('Swords/belts)
-Objects:Button('Auto Buy all swords', 'World', false, function(v) -- string <text>, string <flag>, boolean <enabled>, function [callback]
-	getgenv().buyswords = v
-        while true do
-            if not getgenv().buyswords then return end
-            local A_1 = "buyAllSwords"
-            local A_2 = "Inner Peace Island"
-            local Event = game:GetService("Players").LocalPlayer.ninjaEvent
-            Event:FireServer(A_1, A_2)
-            wait(0.5)
-        end
-end)
 
 Objects:Button('Auto buy all belts', 'World', false, function(v) -- string <text>, string <flag>, boolean <enabled>, function [callback]
 	getgenv().buybelts = v
